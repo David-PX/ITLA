@@ -48,17 +48,23 @@ namespace CapaDatos
             public DataTable Ingresar(string usuario, string contra)
         {
             SqlDataReader leerFilas;
+            DataTable tabla = new DataTable();
             SqlCommand cmd = new SqlCommand("SP_INGRESAR", conexion);
             cmd.CommandType = CommandType.StoredProcedure;
             conexion.Open();
             cmd.Parameters.AddWithValue("@USUARIO", usuario);
             cmd.Parameters.AddWithValue("@CONTRA", contra);
-            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
-            DataTable dataTable = new DataTable();
-            adapter.Fill(dataTable);
+            leerFilas = cmd.ExecuteReader();
+            tabla.Load(leerFilas);
+            leerFilas.Close();
             conexion.Close();
-            return dataTable;
+            return tabla;
             
+          
+
+
+
+
         }
 
 

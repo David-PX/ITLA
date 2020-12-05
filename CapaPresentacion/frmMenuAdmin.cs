@@ -106,6 +106,8 @@ namespace CapaPresentacion
         private void agregarVisitante_Click(object sender, EventArgs e)
         {
             subMenuVisitantes.Visible = false;
+            frmAgregarVisitante frm = new frmAgregarVisitante();
+            frm.Show();
         }
         private void modificarVisitantes_Click(object sender, EventArgs e)
         {
@@ -115,6 +117,34 @@ namespace CapaPresentacion
         private void verVisitantes_Click(object sender, EventArgs e)
         {
             subMenuVisitantes.Visible = false;
+            frmVerVisitantes frm = new frmVerVisitantes();
+            frm.Show();
+        }
+
+        private void btnEdificios_Click(object sender, EventArgs e)
+        {
+            subMenuVisitantes.Visible = false;
+            frmEdificioscs frm = new frmEdificioscs();
+            frm.Show();
+        }
+
+        private void btnAulas_Click(object sender, EventArgs e)
+        {
+            subMenuVisitantes.Visible = false;
+            frmAulas frm = new frmAulas();
+            frm.Show();
+        }
+
+        private void center_MouseClick(object sender, MouseEventArgs e)
+        {
+            subMenuVisitantes.Visible = false;
+            subMenuOpciones.Visible = false;
+            subMenuUsuarios.Visible = false;
+        }
+
+        private void center_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

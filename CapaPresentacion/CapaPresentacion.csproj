@@ -56,11 +56,29 @@
     <Compile Include="frmAgregarUsuario.Designer.cs">
       <DependentUpon>frmAgregarUsuario.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmAgregarVisitante.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAgregarVisitante.Designer.cs">
+      <DependentUpon>frmAgregarVisitante.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmAulas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmAulas.Designer.cs">
+      <DependentUpon>frmAulas.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmCancelOrAccept.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="frmCancelOrAccept.Designer.cs">
       <DependentUpon>frmCancelOrAccept.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmEdificioscs.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEdificioscs.Designer.cs">
+      <DependentUpon>frmEdificioscs.cs</DependentUpon>
     </Compile>
     <Compile Include="frmError.cs">
       <SubType>Form</SubType>
@@ -80,6 +98,12 @@
     <Compile Include="frmMenuAdmin.Designer.cs">
       <DependentUpon>frmMenuAdmin.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmMenuNormal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmMenuNormal.Designer.cs">
+      <DependentUpon>frmMenuNormal.cs</DependentUpon>
+    </Compile>
     <Compile Include="frmModificar.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -92,13 +116,28 @@
     <Compile Include="frmSuccess.Designer.cs">
       <DependentUpon>frmSuccess.cs</DependentUpon>
     </Compile>
+    <Compile Include="frmVerVisitantes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmVerVisitantes.Designer.cs">
+      <DependentUpon>frmVerVisitantes.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="frmAgregarUsuario.resx">
       <DependentUpon>frmAgregarUsuario.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmAgregarVisitante.resx">
+      <DependentUpon>frmAgregarVisitante.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAulas.resx">
+      <DependentUpon>frmAulas.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmCancelOrAccept.resx">
       <DependentUpon>frmCancelOrAccept.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEdificioscs.resx">
+      <DependentUpon>frmEdificioscs.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmError.resx">
       <DependentUpon>frmError.cs</DependentUpon>
@@ -109,11 +148,17 @@
     <EmbeddedResource Include="frmMenuAdmin.resx">
       <DependentUpon>frmMenuAdmin.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="frmMenuNormal.resx">
+      <DependentUpon>frmMenuNormal.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="frmModificar.resx">
       <DependentUpon>frmModificar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="frmSuccess.resx">
       <DependentUpon>frmSuccess.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmVerVisitantes.resx">
+      <DependentUpon>frmVerVisitantes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

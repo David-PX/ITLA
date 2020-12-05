@@ -22,3 +22,8 @@ C:\Users\David\source\repos\ITLA\CapaPresentacion\obj\Debug\CapaPresentacion.frm
 C:\Users\David\source\repos\ITLA\CapaPresentacion\obj\Debug\CapaPresentacion.frmCancelOrAccept.resources
 C:\Users\David\source\repos\ITLA\CapaPresentacion\obj\Debug\CapaPresentacion.frmAgregarUsuario.resources
 C:\Users\David\source\repos\ITLA\CapaPresentacion\obj\Debug\CapaPresentacion.frmModificar.resources
+C:\Users\David\source\repos\ITLA\CapaPresentacion\obj\Debug\CapaPresentacion.frmEdificioscs.resources
+C:\Users\David\source\repos\ITLA\CapaPresentacion\obj\Debug\CapaPresentacion.frmAulas.resources
+C:\Users\David\source\repos\ITLA\CapaPresentacion\obj\Debug\CapaPresentacion.frmAgregarVisitante.resources
+C:\Users\David\source\repos\ITLA\CapaPresentacion\obj\Debug\CapaPresentacion.frmVerVisitantes.resources
+C:\Users\David\source\repos\ITLA\CapaPresentacion\obj\Debug\CapaPresentacion.frmMenuNormal.resources

@@ -23,5 +23,7 @@ namespace CapaEntidad
         public string USUARIO { get => _USUARIO; set => _USUARIO = value; }
         public string CONTRA { get => _CONTRA; set => _CONTRA = value; }
         public string ROL { get => _ROL; set => _ROL = value; }
+
+        
     }
 }

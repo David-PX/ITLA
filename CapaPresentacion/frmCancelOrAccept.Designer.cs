@@ -158,6 +158,7 @@
             this.Name = "frmCancelOrAccept";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "frmCancelOrAccept";
+            this.Load += new System.EventHandler(this.frmCancelOrAccept_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);

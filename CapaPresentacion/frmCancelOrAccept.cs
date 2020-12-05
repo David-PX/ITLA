@@ -55,5 +55,10 @@ namespace CapaPresentacion
         {
             this.Close();
         }
+
+        private void frmCancelOrAccept_Load(object sender, EventArgs e)
+        {
+            ParaEjecutar = false;
+        }
     }
 }

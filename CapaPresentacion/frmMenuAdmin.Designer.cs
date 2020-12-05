@@ -36,14 +36,18 @@
             this.label1 = new System.Windows.Forms.Label();
             this.center = new System.Windows.Forms.Panel();
             this.subMenuUsuarios = new System.Windows.Forms.Panel();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
+            this.modificarUsuarios = new System.Windows.Forms.Button();
             this.agregarUusarios = new System.Windows.Forms.Button();
             this.subMenuVisitantes = new System.Windows.Forms.Panel();
+            this.panel7 = new System.Windows.Forms.Panel();
+            this.btnAulas = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.btnEdificios = new System.Windows.Forms.Button();
             this.panel6 = new System.Windows.Forms.Panel();
             this.verVisitantes = new System.Windows.Forms.Button();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.modificarVisitantes = new System.Windows.Forms.Button();
             this.agregarVisitante = new System.Windows.Forms.Button();
             this.subMenuOpciones = new System.Windows.Forms.Panel();
             this.panel3 = new System.Windows.Forms.Panel();
@@ -56,8 +60,6 @@
             this.btnVisitantes = new System.Windows.Forms.Button();
             this.bunifuSeparator1 = new Bunifu.Framework.UI.BunifuSeparator();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.modificarUsuarios = new System.Windows.Forms.Button();
             this.footer.SuspendLayout();
             this.center.SuspendLayout();
             this.subMenuUsuarios.SuspendLayout();
@@ -127,6 +129,8 @@
             this.center.Name = "center";
             this.center.Size = new System.Drawing.Size(1440, 846);
             this.center.TabIndex = 2;
+            this.center.Paint += new System.Windows.Forms.PaintEventHandler(this.center_Paint);
+            this.center.MouseClick += new System.Windows.Forms.MouseEventHandler(this.center_MouseClick);
             // 
             // subMenuUsuarios
             // 
@@ -140,6 +144,14 @@
             this.subMenuUsuarios.TabIndex = 9;
             this.subMenuUsuarios.Visible = false;
             // 
+            // panel9
+            // 
+            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(119)))));
+            this.panel9.Location = new System.Drawing.Point(0, 50);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(13, 47);
+            this.panel9.TabIndex = 9;
+            // 
             // panel10
             // 
             this.panel10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(119)))));
@@ -147,6 +159,22 @@
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(13, 47);
             this.panel10.TabIndex = 8;
+            // 
+            // modificarUsuarios
+            // 
+            this.modificarUsuarios.BackColor = System.Drawing.SystemColors.Window;
+            this.modificarUsuarios.FlatAppearance.BorderSize = 0;
+            this.modificarUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.modificarUsuarios.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.modificarUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(119)))));
+            this.modificarUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.modificarUsuarios.Location = new System.Drawing.Point(16, 50);
+            this.modificarUsuarios.Name = "modificarUsuarios";
+            this.modificarUsuarios.Size = new System.Drawing.Size(181, 47);
+            this.modificarUsuarios.TabIndex = 10;
+            this.modificarUsuarios.Text = "Modificar";
+            this.modificarUsuarios.UseVisualStyleBackColor = false;
+            this.modificarUsuarios.Click += new System.EventHandler(this.modificarUsuarios_Click);
             // 
             // agregarUusarios
             // 
@@ -166,22 +194,72 @@
             // 
             // subMenuVisitantes
             // 
+            this.subMenuVisitantes.Controls.Add(this.panel7);
+            this.subMenuVisitantes.Controls.Add(this.btnAulas);
+            this.subMenuVisitantes.Controls.Add(this.panel1);
+            this.subMenuVisitantes.Controls.Add(this.btnEdificios);
             this.subMenuVisitantes.Controls.Add(this.panel6);
             this.subMenuVisitantes.Controls.Add(this.verVisitantes);
-            this.subMenuVisitantes.Controls.Add(this.panel4);
             this.subMenuVisitantes.Controls.Add(this.panel5);
-            this.subMenuVisitantes.Controls.Add(this.modificarVisitantes);
             this.subMenuVisitantes.Controls.Add(this.agregarVisitante);
             this.subMenuVisitantes.Location = new System.Drawing.Point(142, 66);
             this.subMenuVisitantes.Name = "subMenuVisitantes";
-            this.subMenuVisitantes.Size = new System.Drawing.Size(200, 153);
+            this.subMenuVisitantes.Size = new System.Drawing.Size(200, 200);
             this.subMenuVisitantes.TabIndex = 8;
             this.subMenuVisitantes.Visible = false;
+            // 
+            // panel7
+            // 
+            this.panel7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(119)))));
+            this.panel7.Location = new System.Drawing.Point(0, 148);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(13, 47);
+            this.panel7.TabIndex = 15;
+            // 
+            // btnAulas
+            // 
+            this.btnAulas.BackColor = System.Drawing.SystemColors.Window;
+            this.btnAulas.FlatAppearance.BorderSize = 0;
+            this.btnAulas.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAulas.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAulas.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(119)))));
+            this.btnAulas.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAulas.Location = new System.Drawing.Point(16, 148);
+            this.btnAulas.Name = "btnAulas";
+            this.btnAulas.Size = new System.Drawing.Size(181, 47);
+            this.btnAulas.TabIndex = 16;
+            this.btnAulas.Text = "Aulas";
+            this.btnAulas.UseVisualStyleBackColor = false;
+            this.btnAulas.Click += new System.EventHandler(this.btnAulas_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(119)))));
+            this.panel1.Location = new System.Drawing.Point(0, 99);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(13, 47);
+            this.panel1.TabIndex = 13;
+            // 
+            // btnEdificios
+            // 
+            this.btnEdificios.BackColor = System.Drawing.SystemColors.Window;
+            this.btnEdificios.FlatAppearance.BorderSize = 0;
+            this.btnEdificios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEdificios.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEdificios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(119)))));
+            this.btnEdificios.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnEdificios.Location = new System.Drawing.Point(16, 99);
+            this.btnEdificios.Name = "btnEdificios";
+            this.btnEdificios.Size = new System.Drawing.Size(181, 47);
+            this.btnEdificios.TabIndex = 14;
+            this.btnEdificios.Text = "Edificios";
+            this.btnEdificios.UseVisualStyleBackColor = false;
+            this.btnEdificios.Click += new System.EventHandler(this.btnEdificios_Click);
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(119)))));
-            this.panel6.Location = new System.Drawing.Point(0, 100);
+            this.panel6.Location = new System.Drawing.Point(0, 50);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(13, 47);
             this.panel6.TabIndex = 11;
@@ -194,21 +272,13 @@
             this.verVisitantes.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.verVisitantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(119)))));
             this.verVisitantes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.verVisitantes.Location = new System.Drawing.Point(16, 100);
+            this.verVisitantes.Location = new System.Drawing.Point(16, 50);
             this.verVisitantes.Name = "verVisitantes";
             this.verVisitantes.Size = new System.Drawing.Size(181, 47);
             this.verVisitantes.TabIndex = 12;
             this.verVisitantes.Text = "Ver";
             this.verVisitantes.UseVisualStyleBackColor = false;
             this.verVisitantes.Click += new System.EventHandler(this.verVisitantes_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(119)))));
-            this.panel4.Location = new System.Drawing.Point(0, 50);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(13, 47);
-            this.panel4.TabIndex = 9;
             // 
             // panel5
             // 
@@ -217,22 +287,6 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(13, 47);
             this.panel5.TabIndex = 8;
-            // 
-            // modificarVisitantes
-            // 
-            this.modificarVisitantes.BackColor = System.Drawing.SystemColors.Window;
-            this.modificarVisitantes.FlatAppearance.BorderSize = 0;
-            this.modificarVisitantes.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modificarVisitantes.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modificarVisitantes.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(119)))));
-            this.modificarVisitantes.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.modificarVisitantes.Location = new System.Drawing.Point(16, 50);
-            this.modificarVisitantes.Name = "modificarVisitantes";
-            this.modificarVisitantes.Size = new System.Drawing.Size(181, 47);
-            this.modificarVisitantes.TabIndex = 10;
-            this.modificarVisitantes.Text = "Modificar";
-            this.modificarVisitantes.UseVisualStyleBackColor = false;
-            this.modificarVisitantes.Click += new System.EventHandler(this.modificarVisitantes_Click);
             // 
             // agregarVisitante
             // 
@@ -375,11 +429,11 @@
             this.bunifuSeparator1.BackColor = System.Drawing.Color.Transparent;
             this.bunifuSeparator1.Dock = System.Windows.Forms.DockStyle.Top;
             this.bunifuSeparator1.LineColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(119)))));
-            this.bunifuSeparator1.LineThickness = 4;
+            this.bunifuSeparator1.LineThickness = 3;
             this.bunifuSeparator1.Location = new System.Drawing.Point(0, 0);
             this.bunifuSeparator1.Margin = new System.Windows.Forms.Padding(8, 9, 8, 9);
             this.bunifuSeparator1.Name = "bunifuSeparator1";
-            this.bunifuSeparator1.Size = new System.Drawing.Size(1440, 182);
+            this.bunifuSeparator1.Size = new System.Drawing.Size(1440, 202);
             this.bunifuSeparator1.TabIndex = 0;
             this.bunifuSeparator1.Transparency = 255;
             this.bunifuSeparator1.Vertical = false;
@@ -388,30 +442,6 @@
             // timer1
             // 
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // panel9
-            // 
-            this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(119)))));
-            this.panel9.Location = new System.Drawing.Point(0, 50);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(13, 47);
-            this.panel9.TabIndex = 9;
-            // 
-            // modificarUsuarios
-            // 
-            this.modificarUsuarios.BackColor = System.Drawing.SystemColors.Window;
-            this.modificarUsuarios.FlatAppearance.BorderSize = 0;
-            this.modificarUsuarios.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.modificarUsuarios.Font = new System.Drawing.Font("Segoe UI Semibold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.modificarUsuarios.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(119)))));
-            this.modificarUsuarios.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.modificarUsuarios.Location = new System.Drawing.Point(16, 50);
-            this.modificarUsuarios.Name = "modificarUsuarios";
-            this.modificarUsuarios.Size = new System.Drawing.Size(181, 47);
-            this.modificarUsuarios.TabIndex = 10;
-            this.modificarUsuarios.Text = "Modificar";
-            this.modificarUsuarios.UseVisualStyleBackColor = false;
-            this.modificarUsuarios.Click += new System.EventHandler(this.modificarUsuarios_Click);
             // 
             // frmMenuAdmin
             // 
@@ -461,11 +491,13 @@
         private System.Windows.Forms.Panel subMenuVisitantes;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button verVisitantes;
-        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button modificarVisitantes;
         private System.Windows.Forms.Button agregarVisitante;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Button modificarUsuarios;
+        private System.Windows.Forms.Panel panel7;
+        private System.Windows.Forms.Button btnAulas;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnEdificios;
     }
 }
