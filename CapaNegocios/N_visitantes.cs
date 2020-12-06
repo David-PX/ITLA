@@ -36,7 +36,7 @@ namespace CapaNegocios
 
         }
 
-        public void ListarVisitantes(int like, DataGridView data)
+        public void ListarVisitantes(string like, DataGridView data)
         {
             data.DataSource = objDato.ListarVisitantes(like);
 

@@ -165,7 +165,7 @@ namespace CapaPresentacion
                 try
                 {
                     objEntidad.ID = Convert.ToInt32(ID);
-                    objEntidad.IDEDIFICIO = Convert.ToInt32(cbxEdificio.Text);
+                    objEntidad.IDEDIFICIO = Convert.ToInt32(cbxEdificio.SelectedValue);
                     objEntidad.PLANTA = cbxPlanta.Text;
                     objEntidad.NOMBRE = txtNombre.text;
                     objEntidad.ESTADO = Convert.ToString(radioButton1.Checked);
@@ -178,7 +178,8 @@ namespace CapaPresentacion
                 }
                 catch (Exception ex)
                 {
-                    frmError.denegationForm("No se ha podido editar la aula" + ex.ToString());
+                    //frmError.denegationForm("No se ha podido editar la aula" + ex.ToString());
+                    MessageBox.Show(ex.ToString());
                 }
 
             }

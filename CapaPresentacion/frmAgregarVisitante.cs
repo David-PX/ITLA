@@ -138,9 +138,11 @@ namespace CapaPresentacion
         private void frmAgregarVisitante_Load(object sender, EventArgs e)
         {
             objNegocio.listarEdificiosEnCmb(cbxEdificio);
+            dt1.CustomFormat = "MM/dd/yyyy hh:mm:ss";
+            dt2.CustomFormat = "MM/dd/yyyy hh:mm:ss";
 
-           
-           
+
+
 
 
 

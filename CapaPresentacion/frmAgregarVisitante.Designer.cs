@@ -31,6 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmAgregarVisitante));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
             this.pPerfil = new System.Windows.Forms.PictureBox();
@@ -54,11 +55,10 @@
             this.label9 = new System.Windows.Forms.Label();
             this.bunifuThinButton21 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.txtCorreo = new Bunifu.Framework.UI.BunifuMetroTextbox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.btnBuscar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pPerfil)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pPerfil)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -71,6 +71,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1023, 82);
             this.panel1.TabIndex = 0;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(954, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(57, 52);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
             // label1
             // 
@@ -173,6 +185,7 @@
             // 
             // dt1
             // 
+            this.dt1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt1.Location = new System.Drawing.Point(542, 483);
             this.dt1.Name = "dt1";
             this.dt1.Size = new System.Drawing.Size(333, 22);
@@ -180,6 +193,7 @@
             // 
             // dt2
             // 
+            this.dt2.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dt2.Location = new System.Drawing.Point(542, 553);
             this.dt2.Name = "dt2";
             this.dt2.Size = new System.Drawing.Size(333, 22);
@@ -379,18 +393,6 @@
             this.txtCorreo.Text = "Ingresa tu correo";
             this.txtCorreo.TextAlign = System.Windows.Forms.HorizontalAlignment.Left;
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(954, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(57, 52);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
-            // 
             // btnBuscar
             // 
             this.btnBuscar.Activecolor = System.Drawing.Color.FromArgb(((int)(((byte)(2)))), ((int)(((byte)(56)))), ((int)(((byte)(150)))));
@@ -462,8 +464,8 @@
             this.Load += new System.EventHandler(this.frmAgregarVisitante_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pPerfil)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pPerfil)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

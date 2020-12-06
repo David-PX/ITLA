@@ -50,7 +50,7 @@ namespace CapaDatos
 
 
         }
-        public DataTable ListarVisitantes(int like)
+        public DataTable ListarVisitantes(string like)
         {
             SqlDataReader leerFilas;
             DataTable tabla = new DataTable();

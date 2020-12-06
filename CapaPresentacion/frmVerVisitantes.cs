@@ -108,17 +108,16 @@ namespace CapaPresentacion
             }
         }
 
-        public void MostrarTabla()
+        public void MostrarTabla(string like)
         {
-          
-            
-            objNegocio.ListarVisitantes(Convert.ToInt32(cbxEdificio.SelectedValue), tablaVisitantes);
+           
+            objNegocio.ListarVisitantes(like, tablaVisitantes);
         }
 
         private void frmVerVisitantes_Load(object sender, EventArgs e)
         {
             objNegocio.listarEdificiosEnCmb(cbxEdificio);
-            MostrarTabla();
+            MostrarTabla("");
         }
 
         private void cbxEdificio_SelectedIndexChanged(object sender, EventArgs e)
@@ -128,7 +127,7 @@ namespace CapaPresentacion
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
-            MostrarTabla();
+            MostrarTabla(cbxEdificio.Text);
         }
     }
 }
